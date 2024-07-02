@@ -63,31 +63,6 @@ const Button = styled.button`
 export default Button;
 ```
 
-### TailwindCSS
-
-- **장점**: 빠른 개발 속도, 스타일 충돌 없음, 높은 구성 가능성 및 확장성.
-- **단점**: 긴 클래스 이름, JSX 수정 필요.
-
-#### 동적 스타일링 해결 방법
-
-- `clsx` 및 `tailwind-merge` 모듈 설치 필요.
-
-```bash
-npm install clsx
-npm install tailwind-merge
-```
-
-- 유틸리티 함수 생성:
-
-```typescript
-import { type ClassValue, clsx } from 'clsx';
-import { twMerge } from 'tailwind-merge';
-
-export function cn(...inputs: ClassValue[]): string {
-	return twMerge(clsx(inputs));
-}
-```
-
 ## 7강: 리액트 디버깅
 
 ### 리액트 DevTools 사용하기
